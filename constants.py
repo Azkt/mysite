@@ -1,4 +1,5 @@
 import course
+import song
 
 COURSES = [
     course.Course(period=1,
@@ -32,3 +33,8 @@ COURSES = [
                   resource_name='Wikipedia',
                   resource_url='https://en.wikipedia.org/wiki/Biology'),
 ]
+
+TOP_TEN_SONGS = [
+    song.Song(title="XO TOUR LIFE",
+        artist_name="Lil Uzi Vert,"
+        youtube_url="
