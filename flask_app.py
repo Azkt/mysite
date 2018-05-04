@@ -6,7 +6,8 @@ from flask import render_template
 import constants
 
 app = Flask(__name__)
-
+app.config.from_object('config.BaseConfig')
+db = SQLAlchemy(app)
 
 
 @app.route('/about_me')
@@ -36,3 +37,5 @@ def homepage():
 @app.route('/top_ten_songs')
 def top_ten_songs():
     return render_template('top_ten_songs.html', songs=constants.TOP_TEN_SONGS)
+
+from flask_sqlalchemy import SQLAlchemy
