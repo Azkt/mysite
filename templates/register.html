@@ -1,64 +1,9 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Register{% endblock %}
 {% block content %}
 <div class="container">
 <h2>Register</h2>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-            <form>
-                <div class="form-group">
-                    <label for="first_name">First name</label>
-                    <input type="text" class="form-control" id="first_name">
-                </div>
-                <div class="form-group">
-                    <label for="last_name">Last name</label>
-                    <input type="text" class="form-control" id="last_name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password">
-                </div>
-                <div class="form-group">
-                    <label for="first_name">First name</label>
-                    <input type="text" class="form-control" id="first_name">
-                </div>
-                <div class="form-group">
-                    <label for="grade">Grade</label>
-                    <select class="form-control" id="grade">
-                        <option value="freshman">Freshman</option>
-                        <option value="sophomore">Sophomore</option>
-                        <option value="junior">Junior</option>
-                        <option value="senior">Senior</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_male" value="male">
-                        <label class="form-check-label" for="gender_male">Male</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_female" value="female">
-                        <label class="form-check-label" for="gender_female">Female</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_other" value="other">
-                        <label class="form-check-label" for="gender_other">Other</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="email_list" id="email_list_yes" value="yes">
-                        <label class="form-check-label" for="email_list_yes">I would like to receive email.</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-secondary">Reset</button>
-                </div>
-            </form>
-            </div>
+{{ wtf.quick_form(form, button_map={'submit':'primary'}) }}
+</div>
 {% endblock %}

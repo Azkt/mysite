@@ -2,25 +2,3 @@
 {% block navbar %}
 {{ nav.mysite_navbar.render() }}
 {% endblock %}
-<nav class="navbar navbar-expand-sm navbar-light bg-info">
-    <span class="navbar-brand" href="#">My Site</span>
-    <ul class="nav navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('homepage') }}">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('about_me') }}">About me</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('class_schedule') }}">Class schedule</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('top_ten_songs') }}">Top Ten Songs</a>
-        </li>
-    </ul>
-</nav>
-</div>
-{% endblock %}
