@@ -7,5 +7,9 @@
 {% else %}
 <p>Welcome to MySite!</p>
 {% endif %}
+<h3>Recent posts from users</h3>
+{% for post in posts %}
+<p>{{ post.body }}</p>
+{% endfor %}
 </div>
 {% endblock %}
