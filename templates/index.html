@@ -2,5 +2,10 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <div class="container">
-<p>This is going to be an amazing microblog soon!</p>
+{% if current_user.is_authenticated %}
+<p>Welcome, {{ current_user.username}}!</p>
+{% else %}
+<p>Welcome to MySite!</p>
+{% endif %}
+</div>
 {% endblock %}
